@@ -1,51 +1,60 @@
-@font-face {
-    font-family: Outfit;
-    src: url(qr-code-component-main\font\outfit\fonts);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    margin: 0;
+}
+
+.block__container { 
+    display: flex;
+    border-radius: 2%;
+    align-items: center;
+    background-color: white;
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
+    
+}
+
+.Product__picture {
+    height: 500px;
+    width: 300px;
+    border-radius: 2% 0 0 2%;
 }
 
 
-body {
-    display: flex; /* Active le modèle de mise en page Flexbox pour l'élément body. Cela transforme le body en un conteneur flex */
-    justify-content: center; /* Centre le contenu horizontalement (sur l'axe principal, qui est de gauche à droite dans un conteneur Flexbox). */
-    align-items: center; /* Centre le contenu verticalement (sur l'axe secondaire, qui est de haut en bas dans un conteneur Flexbox) */ 
-    height: 100vh; 
-    margin: 0; /* Enlève la marge par défaut appliquée par certains navigateurs (par exemple, les navigateurs appliquent souvent une petite marge autour du body */
-    background-color: hsl(212, 45%, 89%);
-  }
-  
-  .QR-code {
-    width: 280px; /* Ajuste la taille du QR code */
-    max-width: fit-content;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-
-  .content-block {
+.Product__name {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    height: 440px;
+    flex-direction: column; /* Place "Perfume" au-dessus du titre */
+    justify-content: center; 
+    align-items: flex-start; /* Aligne le texte à gauche */
     padding: 20px;
-    border-radius: 10px;
-    box-sizing: bder;
-    background-color: white;
-  }
+    margin: 0; /* Supprime le `margin-bottom: 10em` */
+    line-height: 1; /* Meilleur espacement des lignes */
+    margin-top: -130px;
+}
 
-  .text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 1px;
-    text-align: center;
-  }
+.product__category {
+    font-size: 0.8em;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} 
 
-  .small-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 45px;
-    margin-top: 10px;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.5);
-  }
+.description {
+    font-size: 17px;
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    line-height: 1.2;
+}
+
+.price {
+    color: hsl(158, 36%, 37%);
+}
+
+.cart__picture {
+    color: green;
+}
